@@ -20,10 +20,8 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 NUM_TESTS = 2^(W + F);
 
 %% Create test vector
-test_vector = zeros(NUM_TESTS, 1);
-for i = 1:NUM_TESTS
-   test_vector(i) = i-1;
-   test_vector(i) = i / (2^F);
+for i = 0:NUM_TESTS - 1
+   test_vector = i;
 end
 
 
