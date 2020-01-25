@@ -2,9 +2,9 @@
 ;
 ; All Rights Reserved.
 ;
-; THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION WHICH IS THE PROPERTY OF 
+; THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION WHICH IS THE PROPERTY OF
 ; MENTOR GRAPHICS CORPORATION OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-;   
+;
 
 [Library]
 std = $MODEL_TECH/../std
@@ -98,7 +98,7 @@ cyclone10lp_ver = $MODEL_TECH/../altera/verilog/cyclone10lp
 
 work = work
 [vcom]
-; VHDL93 variable selects language version as the default. 
+; VHDL93 variable selects language version as the default.
 ; Default is VHDL-2002.
 ; Value of 0 or 1987 for VHDL-1987.
 ; Value of 1 or 1993 for VHDL-1993.
@@ -220,7 +220,7 @@ Resolution = ps
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 500 ns
+RunLength = 10 us
 
 ; Maximum iterations that can be run without advancing simulation time
 IterationLimit = 5000
@@ -241,7 +241,7 @@ IterationLimit = 5000
 BreakOnAssertion = 3
 
 ; Assertion Message Format
-; %S - Severity Level 
+; %S - Severity Level
 ; %R - Report Message
 ; %T - Time of assertion
 ; %D - Delta
@@ -392,10 +392,10 @@ ConcurrentFileLimit = 40
 ; description of a message.
 
 ; Control transcripting of elaboration/runtime messages.
-; The default is to have messages appear in the transcript and 
+; The default is to have messages appear in the transcript and
 ; recorded in the wlf file (messages that are recorded in the
 ; wlf file can be viewed in the MsgViewer).  The other settings
-; are to send messages only to the transcript or only to the 
+; are to send messages only to the transcript or only to the
 ; wlf file.  The valid values are
 ;    both  {default}
 ;    tran  {transcript only}
