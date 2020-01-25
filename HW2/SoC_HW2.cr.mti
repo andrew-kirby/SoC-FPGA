@@ -1,1 +1,13 @@
+D:/GitHub/SoC-FPGA/HW2/tcounter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/HW2/tcounter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling entity test_counter
+-- Compiling architecture only of test_counter
 
+} {} {}} D:/GitHub/SoC-FPGA/HW2/counter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/HW2/counter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling entity counter
+-- Compiling architecture only of counter
+
+} {} {}}
