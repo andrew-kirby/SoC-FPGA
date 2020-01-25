@@ -8,3 +8,44 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/cbleg/Downloads
+Enewton_iter
+Z0 w1579996000
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL
+Z5 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd
+Z6 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd
+l0
+L5
+VdGb>NL[BjNP4EPcod@gSz2
+!s100 06?Vf9@FMWnaajf<XYg261
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1579996008
+!i10b 1
+Z9 !s108 1579996008.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd|
+Z11 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Anewton_iter_arch
+R1
+R2
+R3
+DEx4 work 11 newton_iter 0 22 dGb>NL[BjNP4EPcod@gSz2
+l24
+L18
+VAi8lbdeYJzbmcJB];B7R]3
+!s100 <]^<W=22GM1Hz<gdD]^hZ0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
