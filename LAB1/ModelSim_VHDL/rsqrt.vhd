@@ -10,8 +10,8 @@ entity rsqrt is
 		 N_iterations	: positive := 3);
 
 	port	(clk : in  std_logic;
-		 x   : in  std_logic_vector(W_bit-1 downto 0);
-		 y   : out std_logic_vector(W_bit-1 downto 0));
+		 x   : in  std_logic_vector(W_bits-1 downto 0);
+		 y   : out std_logic_vector(W_bits-1 downto 0));
 
 end entity rsqrt;
 

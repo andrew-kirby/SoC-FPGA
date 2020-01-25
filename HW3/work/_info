@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.1
+Eadd1
+Z0 w1579988929
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/HW3
+Z5 8C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1.vhd
+Z6 FC:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1.vhd
+l0
+L5
+VhBlJb1iL[?T3X721[GdfM0
+!s100 dnTCnjEeV7g4h]SInZ^H:3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1579993523
+!i10b 1
+Z9 !s108 1579993523.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1.vhd|
+Z11 !s107 C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aadd1_arch
+R1
+R2
+R3
+DEx4 work 4 add1 0 22 hBlJb1iL[?T3X721[GdfM0
+l18
+L16
+VeZCOJGdKMgjz8U<C`j0MV2
+!s100 AGgN1Kn2aFA6dHZZk9eJP0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadd1_tb
+Z14 w1579993454
+Z15 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z16 8C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1_tb.vhd
+Z17 FC:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1_tb.vhd
+l0
+L7
+VQ7cI7:Y;U@O_[:1jnzoVG0
+!s100 f2[em8Si;R=k_dWUaz7<h0
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1_tb.vhd|
+Z19 !s107 C:\Users\andy-\OneDrive\School\EELE468\Github\SoC-FPGA\HW3\add1_tb.vhd|
+!i113 1
+R12
+R13
+Aadd1_tb_arch
+R15
+R1
+R2
+R3
+Z20 DEx4 work 7 add1_tb 0 22 Q7cI7:Y;U@O_[:1jnzoVG0
+l35
+L10
+Z21 V<67ez>c`oDONYk<JT`Pe20
+Z22 !s100 Ug``Kl9^E_hlT@GOB8UeN3
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
