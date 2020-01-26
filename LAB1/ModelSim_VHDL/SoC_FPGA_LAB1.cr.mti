@@ -1,4 +1,43 @@
-D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd
+D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lzc
+-- Compiling architecture behavioral of lzc
+
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity rsqrt_tb
+-- Compiling architecture rsqrt_tb_arch of rsqrt_tb
+
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity newton_iter
+-- Compiling architecture newton_iter_arch of newton_iter
+
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/newton_iter_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity newton_iter_tb
+-- Compiling architecture newton_iter_tb_arch of newton_iter_tb
+
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,12 +45,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity rsqrt
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(13): (vcom-1136) Unknown identifier "W_bit".
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(13): ** Error: (vcom-1591) Bad expression in left bound of range expression.
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(13): Type error in range expression.
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(14): (vcom-1136) Unknown identifier "W_bit".
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(14): ** Error: (vcom-1591) Bad expression in left bound of range expression.
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(14): Type error in range expression.
-** Error: D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd(16): VHDL Compiler exiting
+-- Compiling architecture rsqrt_arch of rsqrt
 
-} {9.0 16.0} {}}
+} {} {}}
