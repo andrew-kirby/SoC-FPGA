@@ -34,9 +34,9 @@ constant N 	: natural := 3;
 
 signal clk 	: std_logic := '0';
 signal num_in	: std_logic_vector(W-1 downto 0);
-signal num_out	: std_logic_vector((W*2)-1 downto 0);
-signal y1       : std_logic_vector((W*2)-1 downto 0);
-signal y2       : std_logic_vector((W*2)-1 downto 0);
+signal num_out	: std_logic_vector((W)-1 downto 0);
+signal y1       : std_logic_vector((W)-1 downto 0);
+signal y2       : std_logic_vector((W)-1 downto 0);
 
 begin
 --instantiate the newton_iter
@@ -49,7 +49,7 @@ NEWTON_ITER_1 : newton_iter
    port map(
 	clk => clk,
 	x   => num_in,
-	yn  => "10000000",
+	yn  => "0000000010000000",
 	yn_1 => y1);
 
 NEWTON_ITER_2 : newton_iter

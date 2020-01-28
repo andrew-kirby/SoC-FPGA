@@ -32,19 +32,25 @@ begin
 	end process;
 
 	process(x_uns, yn_uns)
-	   variable ynpow2_uns : unsigned((W_bits*2)-1 downto 0);
-	   variable ynx_uns    : unsigned((W_bits*2)-1 downto 0);
-	   variable ynynx_uns  : unsigned((W_bits*2)-1 downto 0);
-	   variable yn_1_uns   : unsigned((W_bits*2)-1 downto 0);
+	   variable ynpow2_uns    : unsigned((W_bits*2)-1 downto 0);
+	   variable ynx_uns       : unsigned((W_bits*3)-1 downto 0);
+	   variable ynx_32_uns    : unsigned((W_bits*2)-1 downto 0);
+	   variable ynx_min_3_uns : unsigned((W_bits*3)-1 downto 0);
+	   variable ynx_min_3_32_uns : unsigned((W_bits*2)-1 downto 0);	
+	   variable ynynx_uns     : unsigned((W_bits*2)-1 downto 0);
+	   variable yn_1_uns      : unsigned((W_bits*2)-1 downto 0);
 	begin
 	   ynpow2_uns := yn_uns*yn_uns;            --yn^2
-	   ynx_uns    := (3 - (ynpow2_uns*x_uns)); -- 3-x*y^2
-	   ynynx_uns  := yn_uns*ynx_uns;           --yn*(3-x*yn^2)
+	   ynx_uns    := (ynpow2_uns*x_uns);       -- x*yn^2
+	   ynx_32_uns := ynx_uns((W_bits*2)+(F_bits-1) downto F_bits); -- Cast back
+	   ynx_min_3_uns := 3 - ynx_32_uns;        -- 3 - x*yn^2
+	   ynx_min_3_32_uns := ynx__min_3_32_uns((W_bits*2)+(F_bits-1) downto F_bits); -- Cast back
+	   ynynx_uns  := yn_uns*ynx_min_3_uns;           --yn*(3-x*yn^2)
 	   yn_1_uns   := shift_right(ynynx_uns, 1);--(yn*(3-x*yn^2))/2
 	   
 	   yn_1_out <= yn_1_uns; --output
 	end process;
 	
-	yn_1 <= std_logic_vector(yn_1_out);
+	yn_1 <= std_logic_vector(yn_1_out((W_bits+2*F_bits)-1 downto (2*F_bits)));
 
 end newton_iter_arch;
