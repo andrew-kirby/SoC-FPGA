@@ -11,7 +11,7 @@ entity newton_iter is
 	port	(clk  : in  std_logic;
 		 x    : in  std_logic_vector(W_bits-1 downto 0);
 		 yn   : in  std_logic_vector(W_bits-1 downto 0);
-		 yn_1 : out std_logic_vector((W_bits*2)-1 downto 0));
+		 yn_1 : out std_logic_vector(W_bits-1 downto 0));
 
 end entity newton_iter;
 
@@ -45,6 +45,6 @@ begin
 	   yn_1_out <= yn_1_uns; --output
 	end process;
 	
-	yn_1 <= std_logic_vector(yn_1_out);
+	yn_1 <= std_logic_vector(yn_1_out((W-bits+2*F_bits) downto (2*F_bits));
 
 end newton_iter_arch;

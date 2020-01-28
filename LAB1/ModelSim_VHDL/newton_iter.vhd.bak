@@ -40,7 +40,7 @@ begin
 	   ynpow2_uns := yn_uns*yn_uns;            --yn^2
 	   ynx_uns    := (3 - (ynpow2_uns*x_uns)); -- 3-x*y^2
 	   ynynx_uns  := yn_uns*ynx_uns;           --yn*(3-x*yn^2)
-	   yn_1_uns   := shift_right(ynynx_uns, 1);	   	   --(yn*(3-x*yn^2))/2
+	   yn_1_uns   := shift_right(ynynx_uns, 1);--(yn*(3-x*yn^2))/2
 	   
 	   yn_1_out <= yn_1_uns; --output
 	end process;
