@@ -23,9 +23,9 @@ V>V0hb11FJo=_?iSW6DkD>1
 !s100 WW]dFih:7UC:@OIZHe;6i1
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1580332980
+Z9 !s110 1580337476
 !i10b 1
-Z10 !s108 1580332980.000000
+Z10 !s108 1580337476.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/lzc.vhd|
 Z12 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/lzc.vhd|
 !i113 1
@@ -52,7 +52,7 @@ R12
 R13
 R14
 Enewton_iter
-Z15 w1580332964
+Z15 w1580336429
 Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R3
 R4
@@ -61,8 +61,8 @@ Z17 8C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/A
 Z18 FC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter.vhd
 l0
 L5
-VBWmeO];N1@Khl`an1`fmX3
-!s100 HEIllF4NII6;8^PlPdm]@3
+Vd:>NhhDm>dnclDj?zKdGA3
+!s100 onUISlkUJXg:Ge5JjcCOh1
 R8
 32
 R9
@@ -77,11 +77,11 @@ Anewton_iter_arch
 R16
 R3
 R4
-DEx4 work 11 newton_iter 0 22 BWmeO];N1@Khl`an1`fmX3
-l24
-L18
-VCRlz7U;>f2JOIKWSaUMlN0
-!s100 adO4Gj`bh]f[Y]_kT2Qm=1
+DEx4 work 11 newton_iter 0 22 d:>NhhDm>dnclDj?zKdGA3
+l25
+L19
+VBPo;Z2mj61[Sb6gcc7=Eg0
+!s100 jFMkj0MZ2dEag?Sm5cnUN2
 R8
 32
 R9
@@ -93,7 +93,7 @@ R20
 R13
 R14
 Enewton_iter_tb
-Z21 w1580243726
+Z21 w1580337457
 Z22 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R16
 R3
@@ -107,11 +107,11 @@ V?z4HAHiIG<c:[8V`Hco@E2
 !s100 `mQCNAAa2<5Y06nHbg7Pm0
 R8
 32
-Z25 !s110 1580332981
+R9
 !i10b 1
-Z26 !s108 1580332981.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd|
-Z28 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd|
+R10
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd|
+Z26 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd|
 !i113 1
 R13
 R14
@@ -120,41 +120,41 @@ R22
 R16
 R3
 R4
-Z29 DEx4 work 14 newton_iter_tb 0 22 ?z4HAHiIG<c:[8V`Hco@E2
-l41
+Z27 DEx4 work 14 newton_iter_tb 0 22 ?z4HAHiIG<c:[8V`Hco@E2
+l45
 L10
-Z30 VOX0;m612lz_P@@?0TCe=M3
-Z31 !s100 FF9?]<XeDbV<R>HVd2Gkj2
+VMEjhh><iaC;5io?U^TWGn2
+!s100 CDOd?6TDVmCLCXA:UeISY0
 R8
 32
-R25
+R9
 !i10b 1
+R10
+R25
 R26
-R27
-R28
 !i113 1
 R13
 R14
 Ersqrt
-Z32 w1579994844
+Z28 w1579994844
 R1
 R2
 R3
 R4
 R5
-Z33 8C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd
-Z34 FC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd
+Z29 8C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd
+Z30 FC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd
 l0
 L6
 Vm:NiR[_ZIlBg4n:1Fk?P12
 !s100 W?K62lNeQiE_jijDXaPmH0
 R8
 32
-R25
+R9
 !i10b 1
 R10
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd|
-Z36 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd|
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd|
+Z32 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd|
 !i113 1
 R13
 R14
@@ -170,23 +170,23 @@ VbhkClJFDSoNa_ERNP9:S71
 !s100 I7CILf3:E5DVIVY@UHQlW3
 R8
 32
-R25
+R9
 !i10b 1
 R10
-R35
-R36
+R31
+R32
 !i113 1
 R13
 R14
 Ersqrt_tb
-Z37 w1579995499
+Z33 w1579995499
 R22
 R16
 R3
 R4
 R5
-Z38 8C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd
-Z39 FC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd
+Z34 8C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd
+Z35 FC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd
 l0
 L7
 VzH^nQIE[TkXT2BkAMcCj:0
@@ -196,8 +196,8 @@ R8
 R9
 !i10b 1
 R10
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd|
-Z41 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd|
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd|
+Z37 !s107 C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt_tb.vhd|
 !i113 1
 R13
 R14
@@ -216,8 +216,8 @@ R8
 R9
 !i10b 1
 R10
-R40
-R41
+R36
+R37
 !i113 1
 R13
 R14

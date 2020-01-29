@@ -8,10 +8,11 @@ entity newton_iter is
 		 F_bits		: positive := 8;
 		 N_iterations	: positive := 3);
 
-	port	(clk  : in  std_logic;
-		 x    : in  std_logic_vector(W_bits-1 downto 0);
-		 yn   : in  std_logic_vector(W_bits-1 downto 0);
-		 yn_1 : out std_logic_vector(W_bits-1 downto 0));
+	port	(clk  	: in  std_logic;
+		 x    	: in  std_logic_vector(W_bits-1 downto 0);
+		 yn   	: in  std_logic_vector(W_bits-1 downto 0);
+		 yn_1	: out std_logic_vector(W_bits-1 downto 0);
+		 x_out	: out std_logic_vector(W_bits-1 downto 0));
 
 end entity newton_iter;
 
@@ -22,6 +23,9 @@ architecture newton_iter_arch of newton_iter is
 	signal yn_1_out : std_logic_vector(W_bits-1 downto 0);
 	
 begin
+	-- Assign outputs
+	yn_1 <= yn_1_out; --std_logic_vector(yn_1_out((W_bits+2*F_bits)-1 downto (2*F_bits)));
+	x_out <= std_logic_vector(x_uns);
 
 	process(clk)
 	begin
@@ -42,6 +46,7 @@ begin
 
 		variable ynpow2		: unsigned((W_bits*2)-1 downto 0);
 		variable ynx		: unsigned((W_bits*3)-1 downto 0);
+		variable three		: unsigned((W_bits*3)-1 downto 0);
 		variable ynx_min_3	: unsigned((W_bits*3)-1 downto 0);
 		variable ynynx		: unsigned((W_bits*4)-1 downto 0);
 		variable yn_1_large	: unsigned((W_bits*4)-1 downto 0);
@@ -52,7 +57,8 @@ begin
 		
 		ynpow2		:= yn_uns*yn_uns; -- yn^2;
 		ynx 		:= ynpow2*x_uns; -- x*yn^2;
-		ynx_min_3	:= shift_left(to_unsigned(3, W_bits*3), F_bits*3) - ynx; -- 3 - x*yn^2
+		three		:= shift_left(to_unsigned(3, W_bits*3), F_bits*3);
+		ynx_min_3	:= three - ynx; -- 3 - x*yn^2
 		ynynx		:= yn_uns*ynx_min_3;
 		yn_1_large	:= shift_right(ynynx, 1); --(yn*(3-x*yn^2))/2
 		
@@ -69,7 +75,5 @@ begin
 	   --yn_1_out <= std_logic_vector( yn_1_large( (W_bits+3*F_bits)-1 downto (3*F_bits) ) ); --output
 	   yn_1_out <= std_logic_vector( yn_1_large( ( (W_bits+3*F_bits)-1) downto ((3*F_bits)) ) ); --output
 	end process;
-	
-	yn_1 <= yn_1_out; --std_logic_vector(yn_1_out((W_bits+2*F_bits)-1 downto (2*F_bits)));
 
 end newton_iter_arch;

@@ -1,12 +1,11 @@
-C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_tb.vhd
+C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity newton_iter_tb
--- Compiling architecture newton_iter_tb_arch of newton_iter_tb
+-- Compiling entity newton_iter
+-- Compiling architecture newton_iter_arch of newton_iter
 
 } {} {}} C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/rsqrt.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

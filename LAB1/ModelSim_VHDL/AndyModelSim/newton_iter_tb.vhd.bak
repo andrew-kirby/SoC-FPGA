@@ -18,7 +18,8 @@ component newton_iter is
 	port	(clk  : in  std_logic;
 		 x    : in  std_logic_vector(W_bits-1 downto 0);
 		 yn   : in  std_logic_vector(W_bits-1 downto 0);
-		 yn_1 : out std_logic_vector((W_bits)-1 downto 0));
+		 yn_1 : out std_logic_vector((W_bits)-1 downto 0);
+		 x_out	: out std_logic_vector(W_bits-1 downto 0));
 
 end component newton_iter;
 
@@ -34,9 +35,12 @@ constant N 	: natural := 3;
 
 signal clk 	: std_logic := '0';
 signal num_in	: std_logic_vector(W-1 downto 0);
-signal num_out	: std_logic_vector((W*2)-1 downto 0);
-signal y1       : std_logic_vector((W*2)-1 downto 0);
-signal y2       : std_logic_vector((W*2)-1 downto 0);
+signal num_out	: std_logic_vector((W)-1 downto 0);
+signal y1       : std_logic_vector((W)-1 downto 0);
+signal y2       : std_logic_vector((W)-1 downto 0);
+signal x_out1	: std_logic_vector(W-1 downto 0);
+signal x_out2	: std_logic_vector(W-1 downto 0);
+signal x_out3	: std_logic_vector(W-1 downto 0);
 
 begin
 --instantiate the newton_iter
@@ -50,7 +54,8 @@ NEWTON_ITER_1 : newton_iter
 	clk => clk,
 	x   => num_in,
 	yn  => "0000000010000000",
-	yn_1 => y1);
+	yn_1 => y1,
+	x_out => x_out1);
 
 NEWTON_ITER_2 : newton_iter
    generic map(
@@ -60,9 +65,10 @@ NEWTON_ITER_2 : newton_iter
 
    port map(
 	clk => clk,
-	x   => num_in,
+	x   => x_out1,
 	yn  => y1,
-	yn_1 => y2);
+	yn_1 => y2,
+	x_out => x_out2);
 
 NEWTON_ITER_3 : newton_iter
    generic map(
@@ -72,9 +78,10 @@ NEWTON_ITER_3 : newton_iter
 
    port map(
 	clk => clk,
-	x   => num_in,
+	x   => x_out2,
 	yn  => y2,
-	yn_1 => num_out);	
+	yn_1 => num_out,
+	x_out => x_out3);	
 
 -- Drive the numbers through
 stimulus : process
@@ -107,6 +114,21 @@ stimulus : process
 		writeline(file_OUTPUT, output_line);	
 
 		clk <= '0'; -- Set the clock low
+	end loop;
+
+	-- Get the lagging data
+	for i in 0 to 3 loop
+
+		wait for 10 ns;
+		
+		clk <= '1'; -- Clock the line so the adder adds
+
+		wait for 50 ns;
+
+		-- Create a line from the output of the adder
+		write(output_line, num_out);
+		writeline(file_OUTPUT, output_line);	
+
 	end loop;
 
 	file_close(file_VECTORS);

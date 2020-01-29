@@ -6,7 +6,7 @@
 %% Set fixed point properties
 W = 16; % Whole number portion
 F = 8; % Fractional portion
-tests = 20000;
+tests = 1000;
 input_filename = 'input.txt';
 test_filename = 'matlab_results.txt';
 results_filename = 'vhdl_results.txt';
@@ -28,12 +28,12 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 % solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
 
 % Test the results
-compareResults(input_filename, test_filename, results_filename, W, F, Fm, 0);
+compareResults(input_filename, test_filename, results_filename, W, F, Fm);
 
 %% %% %% %% %% %% %% %% %% %% FUNCTIONS %% %% %% %% %% %% %% %% %% %% %% %%
 
 % Compares the contents of each file, displaying the results
-function compareResults(input, matlab, vhdl, W, F, Fm, verbose)
+function compareResults(input, matlab, vhdl, W, F, Fm)
     in_id = fopen(input); input = textscan(in_id,'%s'); input = input{1}; fclose(in_id);
     v_id = fopen(vhdl); vhdl = textscan(v_id,'%s'); vhdl = vhdl{1}; fclose(v_id);
     m_id = fopen(matlab); matlab = textscan(m_id,'%s'); matlab = matlab{1}; fclose(m_id);
@@ -44,20 +44,16 @@ function compareResults(input, matlab, vhdl, W, F, Fm, verbose)
         in = fi([], 0, W, F, Fm); v = fi([], 0, W, F, Fm); m = fi([], 0, W, F, Fm);
         in.bin = input{i}; v.bin = vhdl{i}; m.bin = matlab{i};
         if ~strcmp(vhdl{i}, matlab{i})
-            if verbose
             disp(horzcat('MISMATCH (TEST ', num2str(i), ')', ...
                 ': INPUT: ', input{i}, '--', num2str(in.double), ...
                 '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
                 '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
-            end
             num_misses = num_misses + 1;
         else
-            if verbose
             disp(horzcat('MATCH (TEST ', num2str(i), ')', ...
                 ': INPUT: ', input{i}, '--', num2str(in.double), ...
                 '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
                 '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
-            end
         end
     end
     
@@ -67,11 +63,11 @@ end
 %% ------------------------------------------------------------------------
 % Compute a given number of iterations of Newton's method
 function [y] = newtonIterationBlock(guess, x, num_iterations, W, F, Fm)
-    y = newtonIteration(guess, x, W, F, Fm);
+    y = newtonIteration(guess, x, W, F, Fm)
     for i = 2:num_iterations
-        y = newtonIteration(y, x, W, F, Fm);
+        y = newtonIteration(y, x, W, F, Fm)
     end
-%     disp('---')
+    disp('---')
 %     disp(guess.double)
 %     disp(x.double)
 %     disp(y.double)
