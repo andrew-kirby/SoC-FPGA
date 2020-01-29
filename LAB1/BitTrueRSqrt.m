@@ -25,7 +25,7 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 % test_vector = generateTestVector(W, F, Fm, input_filename, tests);
 
 % Create bit-true solutions (as computed using the fi toolbox)
-solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
+% solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
 
 % Test the results
 compareResults(input_filename, test_filename, results_filename, W, F, Fm);
@@ -49,6 +49,11 @@ function compareResults(input, matlab, vhdl, W, F, Fm)
                 '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
                 '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
             num_misses = num_misses + 1;
+        else
+            disp(horzcat('MATCH (TEST ', num2str(i), ')', ...
+                ': INPUT: ', input{i}, '--', num2str(in.double), ...
+                '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
+                '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
         end
     end
     
@@ -58,14 +63,14 @@ end
 %% ------------------------------------------------------------------------
 % Compute a given number of iterations of Newton's method
 function [y] = newtonIterationBlock(guess, x, num_iterations, W, F, Fm)
-    y = newtonIteration(guess, x, W, F, Fm);
+    y = newtonIteration(guess, x, W, F, Fm)
     for i = 2:num_iterations
-        y = newtonIteration(y, x, W, F, Fm);
+        y = newtonIteration(y, x, W, F, Fm)
     end
-%     disp('---')
-%     disp(guess.double)
-%     disp(x.double)
-%     disp(y.double)
+    disp('---')
+    disp(guess.double)
+    disp(x.double)
+    disp(y.double)
 end
 
 %% ------------------------------------------------------------------------
@@ -73,13 +78,44 @@ end
 % Follow y_n+1 = y_n(3-x*y_n^2) / 2
 % Remains bit-true to the operations going on in our vhdl implementation.
 function [y] = newtonIteration(y_n, x, W, F, Fm)
+
+    % Force word results size
+    Fm.ProductWordLength = W*2;
+    Fm.ProductFractionLength = F*2;
+    Fm.SumWordLength = W*2;
+    Fm.SumFractionLength = F*2;
+    % Make sure the operands obey this scheme
+    y_n = fi(y_n, 0, W, F, Fm);
+    % Compute
     ypow2 = y_n * y_n;
-    ypow2_cut = fi(ypow2, 0, W*2, F*2, Fm);
-    ynx = fi(3, 0, W*3, F*3, Fm) - ypow2_cut * x;
-    ynx_cut = fi(ynx, 0, W*3, F*3, Fm);
-    ynynx = y_n * ynx_cut;
+   
+    % Force word results size
+    Fm.ProductWordLength = W*3;
+    Fm.ProductFractionLength = F*3;
+    Fm.SumWordLength = W*3;
+    Fm.SumFractionLength = F*3;
+    % Make sure the operands obey this scheme
+    ypow2 = fi(ypow2, 0, W*2, F*2, Fm);
+    x = fi(x, 0, W, F, Fm);
+    % Compute
+    % ypow2_cut = fi(ypow2, 0, W*2, F*2, Fm);
+    ynx = fi(3, 0, W*3, F*3, Fm) - ypow2 * x;
+    
+    % Force word results size
+    Fm.ProductWordLength = W*4;
+    Fm.ProductFractionLength = F*4;
+    Fm.SumWordLength = W*4;
+    Fm.SumFractionLength = F*4;
+    % Make sure the operands obey this scheme
+    ynx = fi(ynx, 0, W*3, F*3, Fm);
+    y_n = fi(y_n, 0, W, F, Fm);
+    % Compute
+    %ynx_cut = fi(ynx, 0, W*3, F*3, Fm);
+    ynynx = y_n * ynx;
     y_large = ynynx / 2;
-    y = fi(y_large, 0, W, F, Fm);
+    
+    % Cut back down to size
+    y = fi(y_large, 0, W, F, Fm); % Should just take needed bits (check if it does this?)
    % y.bin = y.bin((3*F):(W+3*F))
 end
 
