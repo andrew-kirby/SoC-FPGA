@@ -4,9 +4,9 @@
 % Performs bit-true RSqrt operations.
 
 %% Set fixed point properties
-W = 12; % Whole number portion
-F = 4; % Fractional portion
-tests = 100;
+W = 16; % Whole number portion
+F = 8; % Fractional portion
+tests = 1000;
 input_filename = 'input.txt';
 test_filename = 'matlab_results.txt';
 results_filename = 'vhdl_results.txt';
@@ -14,8 +14,8 @@ results_filename = 'vhdl_results.txt';
 Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
             'OverflowAction'        ,'Wrap',...
             'ProductMode'           ,'SpecifyPrecision',...
-            'ProductWordLength'     ,2*W,...
-            'ProductFractionLength' ,2*F,...
+            'ProductWordLength'     ,4*W,...
+            'ProductFractionLength' ,4*F,...
             'SumMode'               ,'SpecifyPrecision',...
             'SumWordLength'         ,W,...
             'SumFractionLength'     ,F);
@@ -49,12 +49,8 @@ function compareResults(input, vhdl, matlab)
 end
 
 %% ------------------------------------------------------------------------
-% Compute one iteration of Newton's method of computing the rsqrt.
-% Follow y_n+1 = y_n(3-x*y_n^2) / 2
-% Remains bit-true to the operations going on in our vhdl implementation.
+% Compute a given number of iterations of Newton's method
 function [y] = newtonIterationBlock(guess, x, num_iterations, W, F)
-
-
     y = newtonIteration(guess, x);
     for i = 2:num_iterations
         y = newtonIteration(y, x);
