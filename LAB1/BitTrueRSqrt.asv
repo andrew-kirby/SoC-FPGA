@@ -25,7 +25,7 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 % test_vector = generateTestVector(W, F, Fm, input_filename, tests);
 
 % Create bit-true solutions (as computed using the fi toolbox)
-solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
+% solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
 
 % Test the results
 compareResults(input_filename, test_filename, results_filename, W, F, Fm);
@@ -44,14 +44,15 @@ function compareResults(input, matlab, vhdl, W, F, Fm)
         in = fi([], 0, W, F, Fm); v = fi([], 0, W, F, Fm); m = fi([], 0, W, F, Fm);
         in.bin = input{i}; v.bin = vhdl{i}; m.bin = matlab{i};
         if ~strcmp(vhdl{i}, matlab{i})
-            disp(horzcat('MISMATCH: INPUT: ', input{i}, '--', num2str(in.double), ...
+            disp(horzcat('MISMATCH (TEST ', num2str(i), ')', ...
+                ': INPUT: ', input{i}, '--', num2str(in.double), ...
                 '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
                 '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
             num_misses = num_misses + 1;
         end
     end
     
-    disp(horzcat('Comparison finished. Total misses: ', num2str(num_misses)))
+    disp(horzcat('Comparison finished. Total matches: ', num2str(length(input)-num_misses), ' Total misses: ', num2str(num_misses)))
 end
 
 %% ------------------------------------------------------------------------

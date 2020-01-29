@@ -44,14 +44,15 @@ function compareResults(input, matlab, vhdl, W, F, Fm)
         in = fi([], 0, W, F, Fm); v = fi([], 0, W, F, Fm); m = fi([], 0, W, F, Fm);
         in.bin = input{i}; v.bin = vhdl{i}; m.bin = matlab{i};
         if ~strcmp(vhdl{i}, matlab{i})
-            disp(horzcat('MISMATCH: INPUT: ', input{i}, '--', num2str(in.double), ...
+            disp(horzcat('MISMATCH (TEST ', num2str(i), ')', ...
+                ': INPUT: ', input{i}, '--', num2str(in.double), ...
                 '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
                 '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
             num_misses = num_misses + 1;
         end
     end
     
-    disp(horzcat('Comparison finished. Total misses: ', num2str(num_misses)))
+    disp(horzcat('Comparison finished. Total matches: ', num2str(length(input)-num_misses), ' Total misses: ', num2str(num_misses)))
 end
 
 %% ------------------------------------------------------------------------
@@ -73,8 +74,10 @@ end
 % Remains bit-true to the operations going on in our vhdl implementation.
 function [y] = newtonIteration(y_n, x, W, F, Fm)
     ypow2 = y_n * y_n;
-    ynx = fi(3, 0, W*3, F*3, Fm) - ypow2 * x;
-    ynynx = y_n * ynx;
+    ypow2_cut = fi(ypow2, 0, W*2, F*2, Fm);
+    ynx = fi(3, 0, W*3, F*3, Fm) - ypow2_cut * x;
+    ynx_cut = fi(ynx, 0, W*3, F*3, Fm);
+    ynynx = y_n * ynx_cut;
     y_large = ynynx / 2;
     y = fi(y_large, 0, W, F, Fm);
    % y.bin = y.bin((3*F):(W+3*F))
