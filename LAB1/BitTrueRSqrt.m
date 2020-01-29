@@ -17,8 +17,9 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
             'ProductWordLength'     ,4*W,...
             'ProductFractionLength' ,4*F,...
             'SumMode'               ,'SpecifyPrecision',...
-            'SumWordLength'         ,W,...
-            'SumFractionLength'     ,F);
+            'SumWordLength'         ,4*W,...
+            'SumFractionLength'     ,4*F,...
+            'CastBeforeSum'        ,1);
 
 % Create a test vector
 % test_vector = generateTestVector(W, F, Fm, input_filename, tests);
@@ -27,7 +28,7 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
 
 % Test the results
-% compareResults(input_filename, test_filename, results_filename);
+compareResults(input_filename, test_filename, results_filename);
 
 %% %% %% %% %% %% %% %% %% %% FUNCTIONS %% %% %% %% %% %% %% %% %% %% %% %%
 
@@ -50,10 +51,10 @@ end
 
 %% ------------------------------------------------------------------------
 % Compute a given number of iterations of Newton's method
-function [y] = newtonIterationBlock(guess, x, num_iterations, W, F)
-    y = newtonIteration(guess, x);
+function [y] = newtonIterationBlock(guess, x, num_iterations, W, F, Fm)
+    y = newtonIteration(guess, x, W, F, Fm);
     for i = 2:num_iterations
-        y = newtonIteration(y, x);
+        y = newtonIteration(y, x, W, F, Fm);
     end
 end
 
@@ -61,11 +62,13 @@ end
 % Compute one iteration of Newton's method of computing the rsqrt.
 % Follow y_n+1 = y_n(3-x*y_n^2) / 2
 % Remains bit-true to the operations going on in our vhdl implementation.
-function [y] = newtonIteration(y_n, x)
+function [y] = newtonIteration(y_n, x, W, F, Fm)
     ypow2 = y_n * y_n;
-    ynx = 3 - ypow2 * x;
+    ynx = fi(3, 0, W*3, F*3, Fm) - ypow2 * x;
     ynynx = y_n * ynx;
-    y = ynynx / 2;
+    y_large = ynynx / 2;
+    y = fi(y_large, 0, W, F, Fm);
+   % y.bin = y.bin((3*F):(W+3*F))
 end
 
 %% ------------------------------------------------------------------------
@@ -76,8 +79,8 @@ function [solutions] = generateSolutions(W, F, Fm, test_vector, num_iterations, 
         yo_fi = fi([], 0, W, F, Fm);
         yo_fi.bin = test_vector{i};
         x_fi = fi([], 0, W, F, Fm);
-        x_fi.bin = '10000000';
-        result = newtonIterationBlock(yo_fi, x_fi, num_iterations, W, F);
+        x_fi.bin = '0000000010000000';
+        result = newtonIterationBlock(yo_fi, x_fi, num_iterations, W, F, Fm);
         solutions{i} = result.bin;
     end
     
