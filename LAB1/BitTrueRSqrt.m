@@ -28,20 +28,25 @@ Fm = fimath('RoundingMethod'        ,'Zero',... %'Floor',...???
 solutions = generateSolutions(W, F, Fm, test_vector, 3, test_filename);
 
 % Test the results
-compareResults(input_filename, test_filename, results_filename);
+compareResults(input_filename, test_filename, results_filename, W, F, Fm);
 
 %% %% %% %% %% %% %% %% %% %% FUNCTIONS %% %% %% %% %% %% %% %% %% %% %% %%
 
 % Compares the contents of each file, displaying the results
-function compareResults(input, vhdl, matlab)
+function compareResults(input, matlab, vhdl, W, F, Fm)
     in_id = fopen(input); input = textscan(in_id,'%s'); input = input{1}; fclose(in_id);
     v_id = fopen(vhdl); vhdl = textscan(v_id,'%s'); vhdl = vhdl{1}; fclose(v_id);
     m_id = fopen(matlab); matlab = textscan(m_id,'%s'); matlab = matlab{1}; fclose(m_id);
     
     num_misses = 0;
     for i = 1:length(input)
+        % Convert file values to doubles for easy displaying
+        in = fi([], 0, W, F, Fm); v = fi([], 0, W, F, Fm); m = fi([], 0, W, F, Fm);
+        in.bin = input{i}; v.bin = vhdl{i}; m.bin = matlab{i};
         if ~strcmp(vhdl{i}, matlab{i})
-            disp(horzcat('MISMATCH: INPUT: ', input{i}, ' VHDL: ', vhdl{i}, ' MATLAB: ', matlab{i}))
+            disp(horzcat('MISMATCH: INPUT: ', input{i}, '--', num2str(in.double), ...
+                '       VHDL: ', vhdl{i}, '--', num2str(v.double), ...
+                '       MATLAB: ', matlab{i}, '--', num2str(m.double)))
             num_misses = num_misses + 1;
         end
     end
@@ -56,6 +61,10 @@ function [y] = newtonIterationBlock(guess, x, num_iterations, W, F, Fm)
     for i = 2:num_iterations
         y = newtonIteration(y, x, W, F, Fm);
     end
+%     disp('---')
+%     disp(guess.double)
+%     disp(x.double)
+%     disp(y.double)
 end
 
 %% ------------------------------------------------------------------------
@@ -76,10 +85,10 @@ end
 function [solutions] = generateSolutions(W, F, Fm, test_vector, num_iterations, output_filename)
     solutions = cell(length(test_vector),1);
     for i = 1:length(test_vector)
-        yo_fi = fi([], 0, W, F, Fm);
-        yo_fi.bin = test_vector{i};
         x_fi = fi([], 0, W, F, Fm);
-        x_fi.bin = '0000000010000000';
+        x_fi.bin = test_vector{i};
+        yo_fi = fi([], 0, W, F, Fm);
+        yo_fi.bin = '0000000010000000';
         result = newtonIterationBlock(yo_fi, x_fi, num_iterations, W, F, Fm);
         solutions{i} = result.bin;
     end
