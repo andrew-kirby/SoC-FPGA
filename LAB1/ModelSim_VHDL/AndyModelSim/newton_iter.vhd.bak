@@ -74,6 +74,6 @@ begin
 	   
 	   --yn_1_out <= std_logic_vector( yn_1_large( (W_bits+3*F_bits)-1 downto (3*F_bits) ) ); --output
 	   yn_1_out <= std_logic_vector( yn_1_large( ( (W_bits+3*F_bits)-1) downto ((3*F_bits)) ) ); --output
-	end process
+	end process;
 
 end newton_iter_arch;
