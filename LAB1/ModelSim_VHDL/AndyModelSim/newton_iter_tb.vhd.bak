@@ -12,8 +12,7 @@ architecture newton_iter_tb_arch of newton_iter_tb is
 component newton_iter is
 
 	generic (W_bits		: positive := 16;
-		 F_bits		: positive := 8;
-		 N_iterations	: positive := 3);
+		 F_bits		: positive := 8);
 
 	port	(clk  : in  std_logic;
 		 x    : in  std_logic_vector(W_bits-1 downto 0);
@@ -117,7 +116,7 @@ stimulus : process
 	end loop;
 
 	-- Get the lagging data
-	for i in 0 to 3 loop
+	for i in 0 to 1 loop
 
 		wait for 10 ns;
 		
