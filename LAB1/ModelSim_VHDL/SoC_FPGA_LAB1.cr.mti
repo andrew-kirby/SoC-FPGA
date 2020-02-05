@@ -1,14 +1,4 @@
-D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity rsqrt_tb
--- Compiling architecture rsqrt_tb_arch of rsqrt_tb
-
-} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd
+D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/lzc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,6 +7,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity lzc
 -- Compiling architecture behavioral of lzc
+
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity rsqrt_tb
+-- Compiling architecture rsqrt_tb_arch of rsqrt_tb
 
 } {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/rsqrt.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

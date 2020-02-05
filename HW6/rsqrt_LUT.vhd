@@ -141,3 +141,4 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL rsqrt_LUT.bsf FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL rsqrt_LUT_inst.vhd TRUE
 -- Retrieval info: LIB_FILE: altera_mf
+

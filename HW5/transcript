@@ -1,0 +1,376 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile D:/GitHub/SoC-FPGA/HW5/rsqrt_LUT.vhd
+# Loading project SoC_HW_6
+# Compile of rsqrt_LUT.vhd was successful.
+# Compile of rsqrt_LUT_TB.vhd failed with 2 errors.
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:03:39 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add add -r /*
+# ** Error: bad option "add": should be one of...
+#   add atv ?options? ?arg arg ...?
+#   add button text action ?disable? ?options? ?help?
+#   add dataflow ?options? ?arg arg ...?
+#   add lists ?options? ?arg arg ...?
+#   add log ?options? ?arg arg ...?
+#   add memory options ?arg arg ...?
+#   add message ?options? ?arg arg ...?
+#   add monitor ?options? ?arg arg ...?
+#   add schematic ?options? ?arg arg ...?
+#   add testbrowser ?options? ?arg arg ...?
+#   add virtual ?options? ?arg arg ...?
+#   add watch ?options? ?arg arg ...?
+#   add wave ?options? ?arg arg ...?
+add wave sim:/rsqrt_lut_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+quit -sim
+# End time: 20:07:12 on Feb 04,2020, Elapsed time: 0:03:33
+# Errors: 1, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+# Load canceled
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:10:24 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 20:11:33 on Feb 04,2020, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 6
+# Compile of rsqrt_LUT_TB.vhd was successful.
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:13:00 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /rsqrt_lut_tb/ROM_1/altsyncram_component
+run
+quit -sim
+# End time: 20:24:18 on Feb 04,2020, Elapsed time: 0:11:18
+# Errors: 0, Warnings: 12
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:24:45 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+quit -sim
+# End time: 20:26:04 on Feb 04,2020, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:26:13 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+quit -sim
+# End time: 20:28:18 on Feb 04,2020, Elapsed time: 0:02:05
+# Errors: 0, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:28:51 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+quit -sim
+# End time: 20:30:15 on Feb 04,2020, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:30:26 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+quit -sim
+# End time: 20:32:09 on Feb 04,2020, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:32:24 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+quit -sim
+# End time: 20:33:33 on Feb 04,2020, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0
+# Compile of rsqrt_LUT_TB.vhd was successful.
+vsim -gui work.rsqrt_lut_tb
+# vsim -gui work.rsqrt_lut_tb 
+# Start time: 20:33:48 on Feb 04,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.rsqrt_lut_tb(rsqrt_lut_tb_arch)
+# Loading work.rsqrt_lut(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave sim:/rsqrt_lut_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+restart
+run
+restart
+run
+# End time: 20:57:14 on Feb 04,2020, Elapsed time: 0:23:26
+# Errors: 0, Warnings: 0
