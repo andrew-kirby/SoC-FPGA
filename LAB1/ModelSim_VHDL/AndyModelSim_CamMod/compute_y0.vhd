@@ -108,7 +108,7 @@ begin
 			    y0     <= y0_big(W_bits+11 downto F_bits+11); -- +11 because 12-1
 			else -- B odd
 			    y0_big <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a2) * two_exp); -- this step adds 12 fractional bits
-			    y0     <= y0_bit(W_bits+11 downto F_bits+11);
+			    y0     <= y0_big(W_bits+11 downto F_bits+11);
 			end if;						
 
 		end if;		

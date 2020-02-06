@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL
 Ecompute_y0
-Z0 w1580943412
+Z0 w1580958722
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ VWP7Fe5CRn_@f@TajXi63?1
 !s100 Ih_LHARc_9^BUaSd?0LXC1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1580943414
+Z8 !s110 1580958724
 !i10b 1
-Z9 !s108 1580943414.000000
+Z9 !s108 1580958724.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd|
 Z11 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd|
 !i113 1
@@ -35,10 +35,10 @@ R1
 R2
 R3
 Z14 DEx4 work 10 compute_y0 0 22 WP7Fe5CRn_@f@TajXi63?1
-l60
+l61
 L17
-VO=^F_FXGWP?[=4jHmRIAd0
-!s100 43:@aCgjQ_FCaGDcDBHN@2
+V8EA20i1G:IVXn;0lLICFN3
+!s100 DMjmInWIIA<9Yff8FAQjl0
 R7
 32
 R8
