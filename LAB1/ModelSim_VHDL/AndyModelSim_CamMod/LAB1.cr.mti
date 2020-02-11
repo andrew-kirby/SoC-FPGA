@@ -8,16 +8,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity newton_iter_block
 -- Compiling architecture newton_iter_block_arch of newton_iter_block
 
-} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity rsqrt
--- Compiling architecture rsqrt_arch of rsqrt
-
 } {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -27,14 +17,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity rsqrt_LUT
 -- Compiling architecture SYN of rsqrt_lut
 
-} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity compute_y0
--- Compiling architecture compute_y0_arch of compute_y0
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity rsqrt
+-- Compiling architecture rsqrt_arch of rsqrt
 
 } {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -46,6 +37,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity rsqrt_tb
 -- Compiling architecture rsqrt_tb_arch of rsqrt_tb
 
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity newton_iter_block_tb
+-- Compiling architecture newton_iter_block_tb_arch of newton_iter_block_tb
+
 } {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -56,15 +57,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity lzc
 -- Compiling architecture behavioral of lzc
 
-} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
+} {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity newton_iter_block_tb
--- Compiling architecture newton_iter_block_tb_arch of newton_iter_block_tb
+-- Compiling entity compute_y0
+-- Compiling architecture compute_y0_arch of compute_y0
 
 } {} {}} D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

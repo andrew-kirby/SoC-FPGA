@@ -7,7 +7,7 @@ entity lzc is
     port (
         clk        : in  std_logic;
         lzc_vector : in  std_logic_vector (15 downto 0);
-        lzc_count  : out std_logic_vector ( 3 downto 0) --HAVE TO CHANGE IF REGENERATED
+        lzc_count  : out std_logic_vector ( 3 downto 0)
     );
 end lzc;
 

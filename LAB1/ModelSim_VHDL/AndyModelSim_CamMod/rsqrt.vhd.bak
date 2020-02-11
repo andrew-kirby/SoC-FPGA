@@ -74,11 +74,4 @@ begin
 			y0 => y0,
 			y => y
 		);
-
-	-- Send the data through
-	process(clk)
-	begin
-
-	end process;
-
 end rsqrt_arch;
