@@ -5,9 +5,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity rsqrt is
 
-	generic (W_bits		: positive := 16;
-		 F_bits		: positive := 8;
-		 N_iterations	: positive := 3);
+	generic (W_bits		: positive := 8;
+		 F_bits		: positive := 4;
+		 N_iterations	: positive := 48);
 
 	port	(clk : in  std_logic;
 		 x   : in  std_logic_vector(W_bits-1 downto 0);
@@ -20,8 +20,8 @@ architecture rsqrt_arch of rsqrt is
 -- COMPONENT DECLARATIONS --
 component compute_y0 is
 
-	generic (W_bits		: positive := 16;
-		 F_bits		: positive := 8);
+	generic (W_bits		: positive := 8;
+		 F_bits		: positive := 4);
 
 	port	(clk  	: in  std_logic;
 		 x    	: in  std_logic_vector(W_bits-1 downto 0);
@@ -32,9 +32,9 @@ end component compute_y0;
 
 component newton_iter_block is
 
-	generic (W_bits		: positive := 16;
-		 F_bits		: positive := 8;
-		 N_iterations	: positive := 3);
+	generic (W_bits		: positive := 8;
+		 F_bits		: positive := 4;
+		 N_iterations	: positive := 48);
 
 	port	(clk  	: in  std_logic;
 		 x    	: in  std_logic_vector(W_bits-1 downto 0);

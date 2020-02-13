@@ -7,7 +7,7 @@ entity rsqrt is
 
 	generic (W_bits		: positive := 16;
 		 F_bits		: positive := 8;
-		 N_iterations	: positive := 16);
+		 N_iterations	: positive := 48);
 
 	port	(clk : in  std_logic;
 		 x   : in  std_logic_vector(W_bits-1 downto 0);
@@ -34,7 +34,7 @@ component newton_iter_block is
 
 	generic (W_bits		: positive := 16;
 		 F_bits		: positive := 8;
-		 N_iterations	: positive := 3);
+		 N_iterations	: positive := 48);
 
 	port	(clk  	: in  std_logic;
 		 x    	: in  std_logic_vector(W_bits-1 downto 0);

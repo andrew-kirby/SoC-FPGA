@@ -21,7 +21,7 @@ component lzc is
     port (
         clk        : in  std_logic;
         lzc_vector : in  std_logic_vector (15 downto 0);
-        lzc_count  : out std_logic_vector ( 3 downto 0)
+        lzc_count  : out std_logic_vector ( 2 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
     );
 end component lzc;
 
@@ -44,7 +44,12 @@ signal x3 	: std_logic_vector(W_bits-1 downto 0);
 signal x4 	: std_logic_vector(W_bits-1 downto 0);
 signal x5 	: std_logic_vector(W_bits-1 downto 0);
 signal x6 	: std_logic_vector(W_bits-1 downto 0);
-signal Z 	: std_logic_vector(3 downto 0); --HAVE TO CHANGE IF REGENERATED
+signal x7 	: std_logic_vector(W_bits-1 downto 0);
+signal x8 	: std_logic_vector(W_bits-1 downto 0);
+signal x9 	: std_logic_vector(W_bits-1 downto 0);
+signal x10 	: std_logic_vector(W_bits-1 downto 0);
+signal x11 	: std_logic_vector(W_bits-1 downto 0);
+signal Z 	: std_logic_vector(2 downto 0); --!!HAVE TO CHANGE IF REGENERATED!!
 signal Z_int	: integer;
 signal B_int 	: integer;
 signal B2_int 	: integer;
@@ -55,6 +60,7 @@ signal A_int	: integer;
 signal x_a	: std_logic_vector(W_bits-1 downto 0);
 signal x_a2	: std_logic_vector(W_bits-1 downto 0);
 signal x_a3	: std_logic_vector(W_bits-1 downto 0);
+signal x_a4	: std_logic_vector(W_bits-1 downto 0);
 signal x_b	: std_logic_vector(W_bits-1 downto 0);
 signal y0_big   : std_logic_vector((W_bits+16+13)-1 downto 0); --13 from LUT value output bits 16 from the potential of 2^1/2 fraction
 
@@ -89,34 +95,43 @@ begin
 			-- Compute Alpha
 			x3 <= x2;
 			B2_int <= B_int;
-			if((B_int mod 2) = 0) then -- B even
-				A_int <= (-2 * B_int) + (B_int / 2); --always negative
+			if((B2_int mod 2) = 0) then -- B even
+				A_int <= (-2 * B2_int) + (B2_int / 2); --always negative
 			else -- B odd
-				A_int <= -2*B_int + B_int/2 + 1; --always negative
+				A_int <= -2*B2_int + B2_int/2 + 1; --always negative
 			end if;
 			-- Compute Xa and Xb
 			x4 <= x3;
+			x5 <= x4;
+			x6 <= x5;
+			x7 <= x6;
+			x8 <= x7;
+			x9 <= x8;
+			x10 <= x9;
+			x11 <= x10;
 			B3_int <= B2_int;
-			x_a <= std_logic_vector(shift_left(unsigned(x4), A_int)); -- replaced previous -- only need the fractional bits so don't need to worry about size, radix stays in same place
-			x_b <= std_logic_vector(shift_right(unsigned(x4), B_int)); -- replaced previous -- only need the fractional bits so don't need to worry about size, radix stays in same place
+			x_a <= std_logic_vector(shift_left(unsigned(x6), A_int)); -- replaced previous -- only need the fractional bits so don't need to worry about size, radix stays in same place
+			x_b <= std_logic_vector(shift_right(unsigned(x6), B3_int)); -- replaced previous -- only need the fractional bits so don't need to worry about size, radix stays in same place
 			-- Use lookup table to get XB to the -3/2
 			--! need to append 0s if F < 8
-			x5 <= x4;
+			num_in <= std_logic_vector(x_b(F_bits-1 downto F_bits-8)); -- only need the fractional bits so don't need to worry about size, radix stays in same place
+
 			B4_int <= B3_int;
 			x_a2 <= x_a;
-			num_in <= std_logic_vector(x_b(F_bits-1 downto F_bits-8)); -- only need the fractional bits so don't need to worry about size, radix stays in same place
+			--num_in <= std_logic_vector(x_b(F_bits-1 downto F_bits-8)); -- only need the fractional bits so don't need to worry about size, radix stays in same place
 			-- compute Y0
-			x6 <= x5;
+
 			B5_int <= B4_int;
 			x_a3 <= x_a2;
-			if((B4_int mod 2) = 0) then -- B even
-			    y0_big(y0_big'length-1 downto y0_big'length-W_bits-13) <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a2)); -- this step adds 12 fractional bits
+			x_a4 <= x_a3;
+			if((B5_int mod 2) = 0) then -- B even
+			    y0_big(y0_big'length-1 downto y0_big'length-W_bits-13) <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4)); -- this step adds 12 fractional bits
 			else -- B odd
-			    y0_big <= (std_logic_vector(unsigned(x_b_exp) * unsigned(x_a2) * two_exp)); -- this step adds 12 fractional bits
+			    y0_big <= (std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4) * two_exp)); -- this step adds 12 fractional bits
 			end if;				
 
-			y0 <= y0_big(y0_big'length-1 downto y0_big'length-W_bits);
-			x_out <= x5;
+			y0 <= y0_big(y0_big'length-2 downto y0_big'length-W_bits-1);
+			x_out <= x11;
 
 
 		end if;		
