@@ -22,9 +22,9 @@ VWP7Fe5CRn_@f@TajXi63?1
 !s100 Ih_LHARc_9^BUaSd?0LXC1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1581581867
+Z8 !s110 1581716936
 !i10b 1
-Z9 !s108 1581581867.000000
+Z9 !s108 1581716936.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd|
 Z11 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/compute_y0.vhd|
 !i113 1
@@ -64,11 +64,11 @@ V>V0hb11FJo=_?iSW6DkD>1
 !s100 WW]dFih:7UC:@OIZHe;6i1
 R7
 32
-Z19 !s110 1581581868
+Z19 !s110 1581716937
 !i10b 1
-Z20 !s108 1581581868.000000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd|
-Z22 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd|
+R9
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd|
+Z21 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/lzc.vhd|
 !i113 1
 R12
 R13
@@ -86,20 +86,20 @@ R7
 32
 R19
 !i10b 1
+R9
 R20
 R21
-R22
 !i113 1
 R12
 R13
 Enewton_iter
-Z23 w1580875250
+Z22 w1580875250
 R1
 R2
 R3
 R4
-Z24 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd
-Z25 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd
+Z23 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd
+Z24 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd
 l0
 L5
 V1=ei1T[SnD8]V^0kR;:eA1
@@ -108,7 +108,7 @@ R7
 32
 R19
 !i10b 1
-R20
+Z25 !s108 1581716937.000000
 Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd|
 Z27 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter.vhd|
 !i113 1
@@ -127,21 +127,21 @@ R7
 32
 R19
 !i10b 1
-R20
+R25
 R26
 R27
 !i113 1
 R12
 R13
 Enewton_iter_block
-R23
+Z28 w1581716924
 R15
 R16
 R2
 R3
 R4
-Z28 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd
-Z29 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd
+Z29 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd
+Z30 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd
 l0
 L6
 VnBhdF8jKaiOm@a58>5VOl3
@@ -150,9 +150,9 @@ R7
 32
 R19
 !i10b 1
-R20
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd|
-Z31 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd|
+R25
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd|
+Z32 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block.vhd|
 !i113 1
 R12
 R13
@@ -170,21 +170,21 @@ R7
 32
 R19
 !i10b 1
-R20
-R30
+R25
 R31
+R32
 !i113 1
 R12
 R13
 Enewton_iter_block_tb
-R23
-Z32 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R22
+Z33 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
 R4
-Z33 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
-Z34 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
+Z34 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
+Z35 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd
 l0
 L7
 V72dY:mdbkhmeEhGa<cQKK1
@@ -193,14 +193,14 @@ R7
 32
 R19
 !i10b 1
-R20
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd|
-Z36 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd|
+R25
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd|
+Z37 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_block_tb.vhd|
 !i113 1
 R12
 R13
 Anewton_iter_block_tb_arch
-R32
+R33
 R1
 R2
 R3
@@ -213,21 +213,21 @@ R7
 32
 R19
 !i10b 1
-R20
-R35
+R25
 R36
+R37
 !i113 1
 R12
 R13
 Enewton_iter_tb
-R23
-R32
+R22
+R33
 R1
 R2
 R3
 R4
-Z37 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd
-Z38 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd
+Z38 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd
+Z39 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd
 l0
 L7
 V?z4HAHiIG<c:[8V`Hco@E2
@@ -236,14 +236,14 @@ R7
 32
 R19
 !i10b 1
-R20
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd|
-Z40 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd|
+R25
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd|
+Z41 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/newton_iter_tb.vhd|
 !i113 1
 R12
 R13
 Anewton_iter_tb_arch
-R32
+R33
 R1
 R2
 R3
@@ -256,21 +256,21 @@ R7
 32
 R19
 !i10b 1
-R20
-R39
+R25
 R40
+R41
 !i113 1
 R12
 R13
 Ersqrt
-Z41 w1581581795
+Z42 w1581581795
 R15
 R16
 R2
 R3
 R4
-Z42 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
-Z43 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
+Z43 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
+Z44 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd
 l0
 L6
 VhY5P[:EnF81GdGDkKAMY11
@@ -279,9 +279,9 @@ R7
 32
 R19
 !i10b 1
-R20
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd|
-Z45 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd|
+R25
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd|
+Z46 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt.vhd|
 !i113 1
 R12
 R13
@@ -299,20 +299,20 @@ R7
 32
 R19
 !i10b 1
-R20
-R44
+R25
 R45
+R46
 !i113 1
 R12
 R13
 Ersqrt_lut
-Z46 w1580871733
-Z47 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z47 w1580871733
+Z48 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
 R2
 R3
 R4
-Z48 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd
-Z49 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd
+Z49 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd
+Z50 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd
 l0
 L42
 Vf_zVOnViAB9gCMAFLk9?P2
@@ -321,40 +321,40 @@ R7
 32
 R19
 !i10b 1
-R20
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd|
-Z51 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd|
+R25
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd|
+Z52 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_LUT.vhd|
 !i113 1
 R12
 R13
 Asyn
-R47
+R48
 R2
 R3
-Z52 DEx4 work 9 rsqrt_lut 0 22 f_zVOnViAB9gCMAFLk9?P2
+Z53 DEx4 work 9 rsqrt_lut 0 22 f_zVOnViAB9gCMAFLk9?P2
 l56
 L52
-Z53 VRe1;=9bBgVm??LW@7WAi^3
-Z54 !s100 7Nab=@z=_Nj64n?2J_Pi^1
+Z54 VRe1;=9bBgVm??LW@7WAi^3
+Z55 !s100 7Nab=@z=_Nj64n?2J_Pi^1
 R7
 32
-R19
+!s110 1581716938
 !i10b 1
-R20
-R50
+R25
 R51
+R52
 !i113 1
 R12
 R13
 Ersqrt_tb
-Z55 w1581581822
-R32
+Z56 w1581715632
+R33
 R1
 R2
 R3
 R4
-Z56 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd
-Z57 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd
+Z57 8D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd
+Z58 FD:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd
 l0
 L7
 VzH^nQIE[TkXT2BkAMcCj:0
@@ -364,28 +364,28 @@ R7
 R8
 !i10b 1
 R9
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd|
-Z59 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd|
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd|
+Z60 !s107 D:/GitHub/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim_CamMod/rsqrt_tb.vhd|
 !i113 1
 R12
 R13
 Arsqrt_tb_arch
-R32
+R33
 R1
 R2
 R3
 DEx4 work 8 rsqrt_tb 0 22 zH^nQIE[TkXT2BkAMcCj:0
 l38
 L10
-VmPV^7J16mAUUkeE`M1g103
-!s100 lGknYPNiH8<RQF2JC773z2
+Vb<[M5RHP=dnmP70mo;7AZ1
+!s100 O1IAV>LWWY?i=igf7OnPK1
 R7
 32
 R8
 !i10b 1
 R9
-R58
 R59
+R60
 !i113 1
 R12
 R13

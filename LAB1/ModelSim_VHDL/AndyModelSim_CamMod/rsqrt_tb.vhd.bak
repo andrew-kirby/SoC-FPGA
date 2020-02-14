@@ -11,8 +11,8 @@ architecture rsqrt_tb_arch of rsqrt_tb is
 
 component rsqrt is
 
-	generic (W_bits		: positive := 8;
-		 F_bits		: positive := 4;
+	generic (W_bits		: positive := 16;
+		 F_bits		: positive := 8;
 		 N_iterations	: positive := 48);
 
 	port	(clk : in  std_logic;
@@ -27,8 +27,8 @@ end component rsqrt;
 file file_VECTORS : text;
 file file_OUTPUT  : text;
 
-constant W 	: natural := 8;
-constant F 	: natural := 4;
+constant W 	: natural := 16;
+constant F 	: natural := 8;
 constant N 	: natural := 48;
 
 signal clk 	: std_logic := '0';
