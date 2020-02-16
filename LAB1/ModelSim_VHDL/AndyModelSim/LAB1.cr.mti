@@ -37,6 +37,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity newton_iter_block
 -- Compiling architecture newton_iter_block_arch of newton_iter_block
 
+} {} {}} C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/compute_y0.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/compute_y0.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity compute_y0
+-- Compiling architecture compute_y0_arch of compute_y0
+
 } {} {}} C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_block_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/andy-/OneDrive/School/EELE468/Github/SoC-FPGA/LAB1/ModelSim_VHDL/AndyModelSim/newton_iter_block_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
