@@ -16,6 +16,7 @@ function [test_vector, fis] = generateTestVector(W, F, Fm, filename, num_tests)
     %% Create test vector
     test_vector = cell(num_tests, 1);
     fis = cell(num_tests, 1);
+%     for i = 1:num_tests
     for i = 1:num_tests
        msg = horzcat('Generating test ', num2str(i), ' of ', num2str(num_tests), '...');
        waitbar(i/num_tests, H, msg);
@@ -24,6 +25,12 @@ function [test_vector, fis] = generateTestVector(W, F, Fm, filename, num_tests)
        fis(i) = {fixed_point};
        test_vector(i) = {bin(fixed_point)};
     end
+    %% Manual test vectors
+%     fixed_point = fi(number, 0, W, F, Fm);
+%     fixed_point.bin = ''
+%     fis(i) = {fixed_point};
+%     test_vector(i) = {bin(fixed_point)};
+    
     %% Output test vector
     writecell(test_vector, filename);
     delete(H)

@@ -5,7 +5,7 @@
 
 %% Set fixed point properties
 W = 64; % Whole number portion
-F = 32; % Fractional portion
+F = 16; % Fractional portion
 %% Set other properties
 tests = 1000;
 input_filename = 'input.txt';
@@ -41,13 +41,11 @@ clc
 compareResults(input_filename, test_filename, results_filename, W, F, Fm, 1);
 
 %% Check specific numbers
-% clc
+clc
 disp('----------------------')
 index = 2; % 21 starts good (1000 bad) (1500 good) (bad after 15000?)
 num = test_vector_fis{index};
-num.bin = '0000000000000000000000000000000000000000000000000000000000000001';
-num.bin = '1111111111111111111111111111111111111111111111111111111111111111';
-% num.bin = '1000000000000000000000000000000000000000000000000000000000000000';
+num.bin = '1000000000000000000000000000000000000000000000000000000000000000';
 disp(horzcat('Input double: ', num2str(num.double)))
 disp(horzcat('Input binary: ', num.bin))
 y = rsqrt(num, Xb_lookup_table, 16, W, F, Fm);

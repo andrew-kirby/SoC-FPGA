@@ -4,11 +4,11 @@ function [solutions, solutions_fis] = generateSolutions(W, F, Fm, test_vector, n
     H = waitbar(0);
     solutions = cell(length(test_vector),1);
     solutions_fis = cell(length(test_vector),1);
-    for i = 1:200%length(test_vector)
+    for i = 1:length(test_vector)
         x_fi = fi([], 0, W, F, Fm);
         x_fi.bin = test_vector{i};
         result = rsqrt(x_fi, table, num_iterations, W, F, Fm);
-        disp(result.double)
+%         disp(result.double)
         solutions_fis{i} = result;
         solutions{i} = result.bin;
         msg = horzcat('Generating solution ', num2str(i), ' of ', num2str(length(test_vector)), '...');
