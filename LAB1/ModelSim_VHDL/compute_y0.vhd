@@ -20,8 +20,8 @@ architecture compute_y0_arch of compute_y0 is
 component lzc is
     port (
         clk        : in  std_logic;
-        lzc_vector : in  std_logic_vector (63 downto 0);
-        lzc_count  : out std_logic_vector ( 5 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
+        lzc_vector : in  std_logic_vector (27 downto 0);
+        lzc_count  : out std_logic_vector ( 4 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
     );
 end component lzc;
 
@@ -49,7 +49,7 @@ signal x8 	: std_logic_vector(W_bits-1 downto 0);
 signal x9 	: std_logic_vector(W_bits-1 downto 0);
 signal x10 	: std_logic_vector(W_bits-1 downto 0);
 signal x11 	: std_logic_vector(W_bits-1 downto 0);
-signal Z 	: std_logic_vector(5 downto 0); --!!HAVE TO CHANGE IF REGENERATED!!
+signal Z 	: std_logic_vector(4 downto 0); --!!HAVE TO CHANGE IF REGENERATED!!
 signal Z_int	: integer;
 signal B_int 	: integer;
 signal B2_int 	: integer;

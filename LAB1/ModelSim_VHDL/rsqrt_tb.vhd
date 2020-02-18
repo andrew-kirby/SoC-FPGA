@@ -27,9 +27,9 @@ end component rsqrt;
 file file_VECTORS : text;
 file file_OUTPUT  : text;
 
-constant W 	: natural := 64;
-constant F 	: natural := 32;
-constant N 	: natural := 16;
+constant W 	: natural := 28;
+constant F 	: natural := 20;
+constant N 	: natural := 50;
 
 signal clk 	: std_logic := '0';
 signal num_in	: std_logic_vector(W-1 downto 0);
