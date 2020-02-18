@@ -28,7 +28,7 @@ file file_VECTORS : text;
 file file_OUTPUT  : text;
 
 constant W 	: natural := 64;
-constant F 	: natural := 32;
+constant F 	: natural := 16;
 constant N 	: natural := 16;
 
 signal clk 	: std_logic := '0';

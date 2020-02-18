@@ -18,20 +18,20 @@ function [y0] = computeY0(x, table, W, F, Fm)
 %     disp(horzcat('A: ', num2str(A))) %test
     
     %Compute Xa
-%     Fm.ProductWordLength = W*3;
-%     Fm.ProductFractionLength = F+W*2;
-%     Fm.SumWordLength = W*3;
-%     Fm.SumFractionLength = F+W*2;
-    Fm.ProductWordLength = W;
-    Fm.ProductFractionLength = F;
-    Fm.SumWordLength = W;
-    Fm.SumFractionLength = F;
+    Fm.ProductWordLength = W*3;
+    Fm.ProductFractionLength = F+W*2;
+    Fm.SumWordLength = W*3;
+    Fm.SumFractionLength = F+W*2;
+%     Fm.ProductWordLength = W;
+%     Fm.ProductFractionLength = F;
+%     Fm.SumWordLength = W;
+%     Fm.SumFractionLength = F;
+%     
+    x_large = fi(x, 0, W*3, F+W*2, Fm);
+    Xa = x_large * 2^A;
+%     Xa = x * 2^A;
     
-%     x_large = fi(x, 0, W*3, F+W*2, Fm);
-%     Xa = x_large * 2^A;
-    Xa = x * 2^A;
-    
-    Xa = fi(Xa, 0, W, F, Fm);
+%     Xa = fi(Xa, 0, W, F, Fm);
     
     % Xa and Xb
     % Force word results size
@@ -43,8 +43,6 @@ function [y0] = computeY0(x, table, W, F, Fm)
     Xb = x * 2^(-B);
     
     Xb = fi(Xb, 0, W, F, Fm);
-    
-    
     
     % Get table attributes
     addr_bits = table{end-1};
@@ -63,20 +61,20 @@ function [y0] = computeY0(x, table, W, F, Fm)
 %     disp(horzcat('table result: ', Xb_exp_bits)) %test
     
     % Force word results size
-%     Fm.ProductWordLength = W*3+precision+1;
-%     Fm.ProductFractionLength = F+W*2+precision+1;
-%     Fm.SumWordLength = W*3+precision+1;
-%     Fm.SumFractionLength = F+W*2+precision+1;
-    Fm.ProductWordLength = W+precision+1;
-    Fm.ProductFractionLength = F+precision+1;
-    Fm.SumWordLength = W+precision+1;
-    Fm.SumFractionLength = F+precision+1;
+    Fm.ProductWordLength = W*3+precision+1;
+    Fm.ProductFractionLength = F+W*2+precision+1;
+    Fm.SumWordLength = W*3+precision+1;
+    Fm.SumFractionLength = F+W*2+precision+1;
+%     Fm.ProductWordLength = W+precision+1;
+%     Fm.ProductFractionLength = F+precision+1;
+%     Fm.SumWordLength = W+precision+1;
+%     Fm.SumFractionLength = F+precision+1;
     % Make sure the operands obey this scheme
     Xb_exp = fi([], 0, precision+1, precision, Fm);
     Xb_exp.bin = Xb_exp_bits;
     
-%     Xa = fi(Xa, 0, W*3, F+W*2, Fm);
-    Xa = fi(Xa, 0, W, F, Fm);
+    Xa = fi(Xa, 0, W*3, F+W*2, Fm);
+%     Xa = fi(Xa, 0, W, F, Fm);
 %     disp(horzcat('Xa: ', Xa.bin)) %test
     
     % Compute y0
@@ -85,17 +83,17 @@ function [y0] = computeY0(x, table, W, F, Fm)
     % Last check for odd Beta
     if mod(B, 2) % odd
          % Force word results size
-%         Fm.ProductWordLength = W*3+precision+1+16;
-%         Fm.ProductFractionLength = F+W*2+precision+16;
-%         Fm.SumWordLength = W*3+precision+1+16;
-%         Fm.SumFractionLength = F+W*2+1+precision+16;
-        Fm.ProductWordLength = W+precision+1+16;
-        Fm.ProductFractionLength = F+precision+16;
-        Fm.SumWordLength = W+precision+1+16;
-        Fm.SumFractionLength = F+1+precision+16;
+        Fm.ProductWordLength = W*3+precision+1+16;
+        Fm.ProductFractionLength = F+W*2+precision+16;
+        Fm.SumWordLength = W*3+precision+1+16;
+        Fm.SumFractionLength = F+W*2+1+precision+16;
+%         Fm.ProductWordLength = W+precision+1+16;
+%         Fm.ProductFractionLength = F+precision+16;
+%         Fm.SumWordLength = W+precision+1+16;
+%         Fm.SumFractionLength = F+1+precision+16;
         % Make sure the operands obey this scheme
-%         y0 = fi(y0, 0, W*3+precision+1, F+W*2+precision+1, Fm); 
-        y0 = fi(y0, 0, W+precision+1, F+precision+1, Fm);       
+        y0 = fi(y0, 0, W*3+precision+1, F+W*2+precision+1, Fm); 
+%         y0 = fi(y0, 0, W+precision+1, F+precision+1, Fm);       
         two_exp = fi([], 0, 16, 16, Fm);
         two_exp.bin = '1011010100000100';
         

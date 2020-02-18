@@ -4,23 +4,23 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity newton_iter_tb is
+entity newton_iter_block_tb is
 end entity;
 
-architecture newton_iter_tb_arch of newton_iter_tb is
+architecture newton_iter_block_tb_arch of newton_iter_block_tb is
 
-component newton_iter is
+component newton_iter_block is
 
 	generic (W_bits		: positive := 16;
-		 F_bits		: positive := 8);
+		 F_bits		: positive := 8;
+		 N_iterations	: positive := 3);
 
-	port	(clk  : in  std_logic;
-		 x    : in  std_logic_vector(W_bits-1 downto 0);
-		 yn   : in  std_logic_vector(W_bits-1 downto 0);
-		 yn_1 : out std_logic_vector((W_bits)-1 downto 0);
-		 x_out	: out std_logic_vector(W_bits-1 downto 0));
+	port	(clk  	: in  std_logic;
+		 x    	: in  std_logic_vector(W_bits-1 downto 0);
+		 y0   	: in  std_logic_vector(W_bits-1 downto 0);
+		 y 	: out std_logic_vector((W_bits)-1 downto 0));
 
-end component newton_iter;
+end component newton_iter_block;
 
 --------------------------------------------------------
 -- TESTBENCH INTERNAL SIGNALS --------------------------
@@ -35,49 +35,20 @@ constant N 	: natural := 3;
 signal clk 	: std_logic := '0';
 signal num_in	: std_logic_vector(W-1 downto 0);
 signal num_out	: std_logic_vector((W)-1 downto 0);
-signal y1       : std_logic_vector((W)-1 downto 0);
-signal y2       : std_logic_vector((W)-1 downto 0);
-signal x_out1	: std_logic_vector(W-1 downto 0);
-signal x_out2	: std_logic_vector(W-1 downto 0);
-signal x_out3	: std_logic_vector(W-1 downto 0);
 
 begin
---instantiate the newton_iter
-NEWTON_ITER_1 : newton_iter
+--instantiate the newton_iter_block
+NEWTON_ITER_BLOCK_1 : newton_iter_block
    generic map(
 	W_bits => W,
-    	F_bits => F)
+    	F_bits => F,
+	N_iterations => N)
 
    port map(
 	clk => clk,
 	x   => num_in,
-	yn  => "0000000010000000",
-	yn_1 => y1,
-	x_out => x_out1);
-
-NEWTON_ITER_2 : newton_iter
-   generic map(
-	W_bits => W,
-    	F_bits => F)
-
-   port map(
-	clk => clk,
-	x   => x_out1,
-	yn  => y1,
-	yn_1 => y2,
-	x_out => x_out2);
-
-NEWTON_ITER_3 : newton_iter
-   generic map(
-	W_bits => W,
-    	F_bits => F)
-
-   port map(
-	clk => clk,
-	x   => x_out2,
-	yn  => y2,
-	yn_1 => num_out,
-	x_out => x_out3);	
+	y0  => "0000000010000000",
+	y => num_out);	
 
 -- Drive the numbers through
 stimulus : process
