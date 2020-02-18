@@ -20,8 +20,8 @@ architecture compute_y0_arch of compute_y0 is
 component lzc is
     port (
         clk        : in  std_logic;
-        lzc_vector : in  std_logic_vector (15 downto 0);
-        lzc_count  : out std_logic_vector ( 2 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
+        lzc_vector : in  std_logic_vector (63 downto 0);
+        lzc_count  : out std_logic_vector ( 5 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
     );
 end component lzc;
 
@@ -49,13 +49,15 @@ signal x8 	: std_logic_vector(W_bits-1 downto 0);
 signal x9 	: std_logic_vector(W_bits-1 downto 0);
 signal x10 	: std_logic_vector(W_bits-1 downto 0);
 signal x11 	: std_logic_vector(W_bits-1 downto 0);
-signal Z 	: std_logic_vector(2 downto 0); --!!HAVE TO CHANGE IF REGENERATED!!
+signal Z 	: std_logic_vector(3 downto 0); --!!HAVE TO CHANGE IF REGENERATED!!
 signal Z_int	: integer;
 signal B_int 	: integer;
 signal B2_int 	: integer;
 signal B3_int 	: integer;
 signal B4_int 	: integer;
 signal B5_int 	: integer;
+signal B6_int 	: integer;
+signal B7_int 	: integer;
 signal A_int	: integer;
 signal x_a	: std_logic_vector(W_bits-1 downto 0);
 signal x_a2	: std_logic_vector(W_bits-1 downto 0);
@@ -96,9 +98,13 @@ begin
 			x3 <= x2;
 			B2_int <= B_int;
 			if((B2_int mod 2) = 0) then -- B even
-				A_int <= (-2 * B2_int) + (B2_int / 2); --always negative
+				A_int <= (-2 * B2_int) + (B2_int / 2);
 			else -- B odd
-				A_int <= -2*B2_int + B2_int/2 + 1; --always negative
+				if(B2_int < 0) then
+					A_int <= -2*B2_int + (B2_int/2);
+				else
+				A_int <= -2*B2_int + (B2_int/2) + 1;
+				end if;
 			end if;
 			-- Compute Xa and Xb
 			x4 <= x3;
@@ -118,13 +124,13 @@ begin
 
 			B4_int <= B3_int;
 			x_a2 <= x_a;
-			--num_in <= std_logic_vector(x_b(F_bits-1 downto F_bits-8)); -- only need the fractional bits so don't need to worry about size, radix stays in same place
-			-- compute Y0
-
-			B5_int <= B4_int;
+						-- compute Y0
+			--B5_int <= B4_int;
+			--B6_int <= B5_int;
+			--B7_int <= B6_int;
 			x_a3 <= x_a2;
 			x_a4 <= x_a3;
-			if((B5_int mod 2) = 0) then -- B even
+			if((B3_int mod 2) = 0) then -- B even
 			    y0_big(y0_big'length-1 downto y0_big'length-W_bits-13) <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4)); -- this step adds 12 fractional bits
 			else -- B odd
 			    y0_big <= (std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4) * two_exp)); -- this step adds 12 fractional bits
