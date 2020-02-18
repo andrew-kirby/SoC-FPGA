@@ -4,8 +4,8 @@
 % Performs bit-true RSqrt operations.
 
 %% Set fixed point properties
-W = 64; % Whole number portion
-F = 32; % Fractional portion
+W = 28; % Whole number portion
+F = 20; % Fractional portion
 %% Set other properties
 tests = 1000;
 input_filename = 'input.txt';
@@ -34,7 +34,7 @@ Xb_lookup_table = createXBLookupTable(Xb_table_address_bits,Xb_table_precision_b
 Xb_lookup_table = [Xb_lookup_table, Xb_table_address_bits, Xb_table_precision_bits];
 
 %% Create bit-true solutions (as computed using the fi toolbox)
-[solutions, solutions_fis] = generateSolutions(W, F, Fm, test_vector, 16, Xb_lookup_table, test_filename);
+[solutions, solutions_fis] = generateSolutions(W, F, Fm, test_vector, 50, Xb_lookup_table, test_filename);
 
 %% Test the results
 clc

@@ -30,7 +30,7 @@ function lzc(W,outfilename)
 %------------- BEGIN CODE --------------
 switch nargin
     case 0
-        W=64;
+        W=28;
         outfilename = 'lzc';
     case 1
         outfilename = 'lzc';

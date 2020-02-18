@@ -20,8 +20,8 @@ architecture compute_y0_arch of compute_y0 is
 component lzc is
     port (
         clk        : in  std_logic;
-        lzc_vector : in  std_logic_vector (63 downto 0);
-        lzc_count  : out std_logic_vector ( 5 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
+        lzc_vector : in  std_logic_vector (27 downto 0);
+        lzc_count  : out std_logic_vector ( 4 downto 0) --!!HAVE TO CHANGE IF REGENERATED!!
     );
 end component lzc;
 
@@ -132,7 +132,6 @@ begin
 			x_a3 <= x_a2;
 			x_a4 <= x_a3;
 			if((B3_int mod 2) = 0) then -- B even
-			    --y0_big(y0_big'length-1 downto y0_big'length-(W_bits*3)-13) <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4)); -- this step adds 12 fractional bits
 			    y0_big(y0_big'length-1 downto y0_big'length-(W_bits*3)-13) <= std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4)); -- this step adds 12 fractional bits
 			else -- B odd
 			    y0_big <= (std_logic_vector(unsigned(x_b_exp) * unsigned(x_a4) * two_exp)); -- this step adds 12 fractional bits
